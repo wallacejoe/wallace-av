@@ -19,7 +19,7 @@ The packages page allows the user to interact with and view thte available renta
 - Tailwind
 - Lint
 
-- Javascript
+- TypeScript
 - CSS
 - HTML
 
