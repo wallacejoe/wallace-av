@@ -1,3 +1,7 @@
+import Header from "@/components/header/header";
+import Footer from "@/components/footer/footer";
+import "@/globals.css";
+
 export const metadata = {
   title: "WallaceAV",
 };
@@ -9,7 +13,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <Header />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }
