@@ -5,7 +5,7 @@ const Header = () => {
   return (
     <div className="p-10 flex flex-col items-center w-full bg-green-800 text-white border-black border-b-2">
       <div className="w-1/12 flex justify-center">
-        <Link className="w-full" href="">
+        <Link className="w-full" href="/">
           <Image
             className="w-full min-w-24"
             src="/WallaceAVLogo.gif"
