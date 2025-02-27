@@ -8,7 +8,7 @@ export default async function ProductPage(/*{ query }: { query: string }*/) {
   //query, or search, functionality.
 
   return (
-    <div className="w-3/4 grid grid-cols-3 gap-10">
+    <div className="w-3/4 grid grid-cols-3 gap-10 justify-items-center">
       {products.map((product) => (
         <Link
           href={`#` /*`/dashboard/products/${product.product_id}`*/}
