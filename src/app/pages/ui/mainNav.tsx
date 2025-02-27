@@ -18,7 +18,15 @@ export default function MainNav() {
         <li className="flex w-full bg-neutral-500 rounded-lg mt-3">
           <Link
             className="w-full hover:bg-neutral-800 hover:text-white rounded-lg p-2"
-            href=""
+            href="/pages/products"
+          >
+            Products
+          </Link>
+        </li>
+        <li className="flex w-full bg-neutral-500 rounded-lg mt-3">
+          <Link
+            className="w-full hover:bg-neutral-800 hover:text-white rounded-lg p-2"
+            href="/pages/products"
           >
             Packages
           </Link>
