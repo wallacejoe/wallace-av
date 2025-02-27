@@ -18,6 +18,24 @@ const products = [
         description: 'Product description',
         price: 10.11,
     },
+    {
+        product_id: '4',
+        name: 'placeholder',
+        description: 'Product description',
+        price: 10.11,
+    },
+    {
+        product_id: '5',
+        name: 'placeholder',
+        description: 'Product description',
+        price: 10.11,
+    },
+    {
+        product_id: '6',
+        name: 'placeholder',
+        description: 'Product description',
+        price: 10.11,
+    },
 ];
 
 module.exports = {
