@@ -1,9 +1,11 @@
-import MainNav from "./pages/ui/mainNav";
-
 export default function Page() {
   return (
     <main>
-      <MainNav />
+      <section className="w-full flex flex-col items-center bg-red-500 p-12 box-border text-center">
+        <h2 className="w-9/12 text-6xl">
+          Professional Equipment, Affordable Pricing and Timely Service
+        </h2>
+      </section>
       <section className="w-full flex flex-col items-center p-12 box-border text-center">
         <h2 className="w-6/12 text-4xl">
           From events & conferences to backyard parties we have you covered with

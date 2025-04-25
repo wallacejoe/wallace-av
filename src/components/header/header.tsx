@@ -1,5 +1,7 @@
+"use client";
 import Link from "next/link";
 import Image from "next/image";
+import DropdownMenu from "./dropdownMenu";
 
 const Header = () => {
   return (
@@ -18,6 +20,7 @@ const Header = () => {
       <div className="text-center text-2xl mt-2">
         <h1>Wallace Family Audio Visual & Party Rentals</h1>
       </div>
+      <DropdownMenu />
     </div>
   );
 };
