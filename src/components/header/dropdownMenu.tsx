@@ -58,7 +58,7 @@ export default function DropdownMenu() {
       <Dropdown
         isOpen={isOpen}
         onClose={closeDropdown}
-        className="absolute right-0 mt-[17px] flex w-[260px] flex-col rounded-2xl border border-gray-200 bg-white p-3"
+        className="absolute max-lg:left-1/2 max-lg:-translate-x-1/2 lg:right-0 mt-[17px] flex w-[260px] flex-col rounded-2xl border border-gray-200 bg-white p-3"
       >
         <ul className="flex flex-col gap-1 pt-4 pb-3">
           <li>

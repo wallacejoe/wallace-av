@@ -5,8 +5,8 @@ import DropdownMenu from "./dropdownMenu";
 
 const Header = () => {
   return (
-    <div className="p-10 flex flex-col items-center w-full bg-green-800 text-white border-black border-b-2">
-      <div className="w-1/12 flex justify-center">
+    <div className="p-10 flex flex-col items-center w-full lg:flex-row lg:justify-around bg-green-800 text-white border-black border-b-2">
+      <div className="">
         <Link className="w-full" href="/">
           <Image
             className="w-full min-w-24"
