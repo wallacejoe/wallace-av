@@ -1,4 +1,13 @@
-//import Link from "next/link";
-//import packagePage from "../ui/packagePage";
+import MainNav from "../ui/mainNav";
+import PackagePage from "../ui/packagePage";
 
-export default function page() {}
+export default function Page() {
+  return (
+    <main>
+      <MainNav />
+      <section className="w-full flex flex-col items-center p-12 box-border text-center">
+        <PackagePage />
+      </section>
+    </main>
+  );
+}

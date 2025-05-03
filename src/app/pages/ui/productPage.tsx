@@ -8,13 +8,13 @@ export default async function ProductPage(/*{ query }: { query: string }*/) {
   //query, or search, functionality.
 
   return (
-    <div className="w-3/4 grid grid-cols-3 gap-10">
+    <div className="lg:w-3/4 lg:grid lg:grid-cols-3 gap-10 justify-items-center">
       {products.map((product) => (
         <Link
           href={`#` /*`/dashboard/products/${product.product_id}`*/}
           // Link will be added to/with individual product pages
           key={product.product_id}
-          className="w-fit p-2 flex bg-neutral-500 rounded-lg justify-center box-border"
+          className="max-lg:mb-8 w-fit p-2 flex bg-neutral-500 rounded-lg justify-center box-border"
         >
           <div>
             <div className="w-full h-24 mb-3 bg-orange-300"></div>
