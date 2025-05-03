@@ -1,38 +1,38 @@
 
 const products = [
     {
+        productId: '0',
+        name: 'placeholder 0',
+        description: 'Product description',
+        price: 10.11,
+    },
+    {
         productId: '1',
-        name: 'placeholder',
+        name: 'placeholder 1',
         description: 'Product description',
         price: 10.11,
     },
     {
         productId: '2',
-        name: 'placeholder',
+        name: 'placeholder 2',
         description: 'Product description',
         price: 10.11,
     },
     {
         productId: '3',
-        name: 'placeholder',
+        name: 'placeholder 3',
         description: 'Product description',
         price: 10.11,
     },
     {
         productId: '4',
-        name: 'placeholder',
+        name: 'placeholder 4',
         description: 'Product description',
         price: 10.11,
     },
     {
         productId: '5',
-        name: 'placeholder',
-        description: 'Product description',
-        price: 10.11,
-    },
-    {
-        productId: '6',
-        name: 'placeholder',
+        name: 'placeholder 5',
         description: 'Product description',
         price: 10.11,
     },
