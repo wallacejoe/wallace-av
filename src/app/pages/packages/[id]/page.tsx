@@ -1,17 +1,7 @@
 //import axios from "axios";
 import { packages } from "@/app/lib/placeholder-data";
 import { notFound } from "next/navigation";
-
-interface Package {
-  packageId: string;
-  name: string;
-  description: string;
-  price: number;
-}
-
-type GetPackage = {
-  id: number;
-};
+import { Package, GetPackage } from "@/utilities/types/package";
 
 const getPackage = ({ id }: GetPackage): Package => {
   return packages[id];

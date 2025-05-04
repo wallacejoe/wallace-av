@@ -1,17 +1,7 @@
 //import axios from "axios";
 import { products } from "@/app/lib/placeholder-data";
 import { notFound } from "next/navigation";
-
-interface Product {
-  productId: string;
-  name: string;
-  description: string;
-  price: number;
-}
-
-type GetProduct = {
-  id: number;
-};
+import { Product, GetProduct } from "@/utilities/types/product";
 
 const getProduct = ({ id }: GetProduct): Product => {
   return products[id];
