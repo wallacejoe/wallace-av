@@ -3,6 +3,7 @@ import { products } from "@/app/lib/placeholder-data";
 import { notFound } from "next/navigation";
 import { Product, GetProduct } from "@/utilities/types/product";
 import ComponentCard from "@/components/common/componentCard";
+import AddToCart from "@/components/common/addToCart";
 
 const getProduct = ({ id }: GetProduct): Product => {
   return products[id];
@@ -25,6 +26,7 @@ const ProductDetails = async ({ params }: ProductDetailsProps) => {
           <h1>{item.name}</h1>
           <p>{item.description}</p>
           <p>Price: ${item.price}</p>
+          <AddToCart item={item} />
         </div>
       </ComponentCard>
     </div>
