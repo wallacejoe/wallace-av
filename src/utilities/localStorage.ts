@@ -1,20 +1,18 @@
-export const addToStorage = (value: any) => {
- const storage = getFromStorage();
- let newValue;
- if (storage) {
-   newValue = [...storage, value];
- } else {
-    newValue = value;
+export const addToStorage = (item: any) => {
+ const storage: string[] = getFromStorage();
+ if (storage && item) {
+   storage.push(item);
+   localStorage.setItem('cart', JSON.stringify(storage));
+ } else if (item) {
+    const newStorage = [item];
+    localStorage.setItem('cart', JSON.stringify(newStorage));
  }
-
- // Store the value in localStorage
- localStorage.setItem('cart', JSON.stringify(newValue));
 };
 
 export const getFromStorage = () => {
  const items = localStorage.getItem('cart');
  if (items) {
-   return JSON.parse(items)
+   return items ? JSON.parse(items) : [];
  } else {
    return null
  };
