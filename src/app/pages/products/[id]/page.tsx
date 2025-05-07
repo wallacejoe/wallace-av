@@ -1,12 +1,18 @@
 //import axios from "axios";
 import { products } from "@/app/lib/placeholder-data";
 import { notFound } from "next/navigation";
-import { Product, GetProduct } from "@/utilities/types/product";
+import { Product } from "@/utilities/types/product";
 import ComponentCard from "@/components/common/componentCard";
 import AddToCart from "@/components/common/addToCart";
 
-const getProduct = ({ id }: GetProduct): Product => {
-  return products[id];
+const getProduct = (id: string): Product | void => {
+  let selectedItem;
+  products.forEach((item) => {
+    if (item.productId === id) {
+      selectedItem = item;
+    }
+  });
+  return selectedItem;
 };
 
 type ProductDetailsProps = {
@@ -15,7 +21,7 @@ type ProductDetailsProps = {
 
 const ProductDetails = async ({ params }: ProductDetailsProps) => {
   const { id } = await params;
-  const item = await getProduct({ id: Number(id) });
+  const item = await getProduct(id);
 
   if (!item) return notFound();
 

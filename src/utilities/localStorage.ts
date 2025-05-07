@@ -1,8 +1,11 @@
+
 export const addToStorage = (item: any) => {
- const storage: string[] = getFromStorage();
+ const storage = getFromStorage();
  if (storage && item) {
-   storage.push(item);
-   localStorage.setItem('cart', JSON.stringify(storage));
+    if (!storage.some(original => original.item.productId === item.item.productId)) {
+        storage.push(item);
+        localStorage.setItem('cart', JSON.stringify(storage));
+    };
  } else if (item) {
     const newStorage = [item];
     localStorage.setItem('cart', JSON.stringify(newStorage));
@@ -16,4 +19,11 @@ export const getFromStorage = () => {
  } else {
    return null
  };
+}
+
+export const removeFromStorage = (id: string) => {
+    const storage = getFromStorage();
+    const newStorage = storage.filter((item: any) => item.productId !== id);
+
+    localStorage.setItem('cart', JSON.stringify(newStorage));
 }
