@@ -11,9 +11,11 @@ export default async function ProductPage(/*{ query }: { query: string }*/) {
     <div className="lg:w-3/4 lg:grid lg:grid-cols-3 gap-10 justify-items-center">
       {products.map((product) => (
         <Link
-          href={`#` /*`/dashboard/products/${product.product_id}`*/}
+          href={
+            `/pages/products/${product.productId}` /*`/dashboard/products/${product.product_id}`*/
+          }
           // Link will be added to/with individual product pages
-          key={product.product_id}
+          key={product.productId}
           className="max-lg:mb-8 w-fit p-2 flex bg-neutral-500 rounded-lg justify-center box-border"
         >
           <div>

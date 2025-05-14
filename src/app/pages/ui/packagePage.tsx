@@ -7,9 +7,8 @@ export default async function PackagePage() {
     <div className="lg:w-3/4 lg:grid lg:grid-cols-3 gap-10 justify-items-center">
       {packages.map((item) => (
         <Link
-          href={`#` /*`/dashboard/packages/${package.package_id}`*/}
-          // Link will be added to/with individual package pages
-          key={item.package_id}
+          href={`/pages/packages/${item.packageId}`}
+          key={item.packageId}
           className="max-lg:mb-8 w-fit p-2 flex bg-neutral-500 rounded-lg justify-center box-border"
         >
           <div>
