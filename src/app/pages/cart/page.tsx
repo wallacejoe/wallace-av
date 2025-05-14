@@ -1,4 +1,5 @@
 "use client";
+import EmailForm from "@/components/common/emailForm";
 import { getFromStorage, removeFromStorage } from "@/utilities/localStorage";
 import { useEffect, useState } from "react";
 
@@ -29,6 +30,7 @@ export default function Page() {
       ) : (
         <p>Your cart is empty, come back later!</p>
       )}
+      <EmailForm />
     </div>
   );
 }
