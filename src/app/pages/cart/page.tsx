@@ -1,5 +1,5 @@
 "use client";
-import { getFromStorage } from "@/utilities/localStorage";
+import { getFromStorage, removeFromStorage } from "@/utilities/localStorage";
 import { useEffect, useState } from "react";
 
 export default function Page() {
@@ -16,9 +16,14 @@ export default function Page() {
   return (
     <div>
       {storage.length > 0 ? (
-        <div>
+        <div className="w-full flex flex-col items-center">
           {storage.map((item: any) => (
-            <div key={item.item.productId}>{item.item.name}</div>
+            <div key={item.item.productId}>
+              <p>{item.item.name}</p>
+              <button onClick={() => removeFromStorage(item.item.productId)}>
+                Remove Item
+              </button>
+            </div>
           ))}
         </div>
       ) : (
