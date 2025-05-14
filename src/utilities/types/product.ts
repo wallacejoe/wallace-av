@@ -4,7 +4,3 @@ export interface Product {
     description: string;
     price: number;
   }
-  
- export type GetProduct = {
-    id: number;
-  };

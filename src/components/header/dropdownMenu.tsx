@@ -28,7 +28,6 @@ export default function DropdownMenu() {
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >
-             {" "}
           <path
             d="M4 6H20"
             stroke="currentColor"
@@ -36,7 +35,6 @@ export default function DropdownMenu() {
             strokeLinecap="round"
             strokeLinejoin="round"
           />
-             {" "}
           <path
             d="M4 12H20"
             stroke="currentColor"
@@ -44,7 +42,6 @@ export default function DropdownMenu() {
             strokeLinecap="round"
             strokeLinejoin="round"
           />
-             {" "}
           <path
             d="M4 18H20"
             stroke="currentColor"
@@ -89,6 +86,16 @@ export default function DropdownMenu() {
               className="flex items-center gap-3 px-3 py-2 font-medium text-gray-700 rounded-lg group text-theme-sm hover:bg-gray-100 hover:text-gray-700"
             >
               Packages
+            </DropdownItem>
+          </li>
+          <li>
+            <DropdownItem
+              onItemClick={closeDropdown}
+              tag="a"
+              to="/pages/cart"
+              className="flex items-center gap-3 px-3 py-2 font-medium text-gray-700 rounded-lg group text-theme-sm hover:bg-gray-100 hover:text-gray-700"
+            >
+              Cart
             </DropdownItem>
           </li>
         </ul>
