@@ -1,4 +1,3 @@
-// src/components/EmailForm.js
 import { getFromStorage } from "@/utilities/localStorage";
 import React, { useEffect, useState } from "react";
 
