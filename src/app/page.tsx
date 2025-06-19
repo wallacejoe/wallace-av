@@ -1,3 +1,5 @@
+import Carousel from "./pages/ui/packageCarousel";
+
 export default function Page() {
   return (
     <main>
@@ -12,6 +14,7 @@ export default function Page() {
           professional equipment and service
         </h2>
       </section>
+      <Carousel />
       <div className="w-full flex flex-col lg:flex-row lg:justify-around p-12 box-border mb-12 mt-8">
         <p className="lg:w-5/12 text-3xl">
           Serving in and around the Mesa Arizona area we can deliver, setup, and
