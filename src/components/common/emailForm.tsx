@@ -1,12 +1,14 @@
-import { getFromStorage } from "@/utilities/localStorage";
-import React, { useEffect, useState } from "react";
+"use client";
+//import { getFromStorage } from "@/utilities/localStorage";
+//import React, { useEffect, useState } from "react";
 
-const EmailForm = () => {
-  const [recipient, setRecipient] = useState("");
+const EmailForm = ({ item }: Any) => {
+  /*const [recipient, setRecipient] = useState("");
   const [message, setMessage] = useState("");
 
   useEffect(() => {
     // Populate email content from localStorage
+    // Cart feature was discarded. Saving code in case of change
     const data = getFromStorage() || "No ordered products.";
     const storedMessage = data
       .map(
@@ -15,12 +17,13 @@ const EmailForm = () => {
       .join("\n\n");
     setRecipient("Sales@WallaceAV.com");
     setMessage(storedMessage);
-  }, []);
+  }, []);*/
 
   const handleSendEmail = () => {
+    const message = `${item.name}: $${item.price}`;
     const subject = `Rental Request`;
     const body = encodeURIComponent(message);
-    const mailtoLink = `mailto:${recipient}?subject=${subject}&body=${body}`;
+    const mailtoLink = `mailto:${"Sales@WallaceAV"}?subject=${subject}&body=${body}`;
     window.location.href = mailtoLink;
   };
 
@@ -29,7 +32,7 @@ const EmailForm = () => {
       <div className="text-center">
         <form>
           <button type="button" onClick={handleSendEmail}>
-            Send Email
+            Order Package
           </button>
         </form>
       </div>

@@ -2,6 +2,8 @@
 import { packages } from "@/app/lib/placeholder-data";
 import { notFound } from "next/navigation";
 import { Package, GetPackage } from "@/utilities/types/package";
+import ComponentCard from "@/components/common/componentCard";
+import EmailForm from "@/components/common/emailForm";
 
 const getPackage = ({ id }: GetPackage): Package => {
   return packages[id];
@@ -18,10 +20,15 @@ const PackageDetails = async ({ params }: PackageDetailsProps) => {
   if (!item) return notFound();
 
   return (
-    <div className="">
-      <h1>{item.name}</h1>
-      <p>{item.description}</p>
-      <p>Price: ${item.price}</p>
+    <div className="w-full flex flex-col items-center">
+      <ComponentCard title={item.name}>
+        <div className="w-full flex flex-col justify-center items-center">
+          <h1>{item.name}</h1>
+          <p>{item.description}</p>
+          <p>Price: ${item.price}</p>
+          <EmailForm item={item} />
+        </div>
+      </ComponentCard>
     </div>
   );
 };
