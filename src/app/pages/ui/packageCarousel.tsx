@@ -23,7 +23,9 @@ const Carousel = () => {
       {/* Carousel Container */}
       <div
         ref={carouselRef}
-        className="flex space-x-10 snap-x px-20 overflow-x-scroll scroll-smooth scrollbar-hide before:bg-gradient-to-r before:from-gray-900 before:to-transparent after:bg-gradient-to-l after:from-gray-900 after:to-transparent"
+        className="px-36 flex space-x-10 snap-x overflow-x-scroll scroll-smooth scrollbar-hide
+        before:z-10 before:absolute before:w-36 before:top-0 before:bottom-0 before:left-0 before:pointer-events-none before:bg-gradient-to-r before:from-white before:to-transparent
+        after:z-10 after:absolute after:w-36 after:top-0 after:bottom-0 after:right-0 after:pointer-events-none after:bg-gradient-to-l after:from-white after:to-transparent"
       >
         {Array.from(packages).map((item) => (
           <Link
@@ -43,7 +45,7 @@ const Carousel = () => {
       {/* Left Arrow */}
       <button
         onClick={scrollLeft}
-        className="absolute left-2 top-1/2 -translate-y-1/2 bg-black text-white p-1 rounded-md hover:opacity-85"
+        className="absolute left-2 top-1/2 -translate-y-1/2 bg-black text-white p-1 z-20 rounded-md hover:opacity-85"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -58,7 +60,7 @@ const Carousel = () => {
       {/* Right Arrow */}
       <button
         onClick={scrollRight}
-        className="absolute right-2 top-1/2 -translate-y-1/2 bg-black text-white p-1 rounded-md hover:opacity-85"
+        className="absolute right-2 top-1/2 -translate-y-1/2 bg-black text-white p-1 z-20 rounded-md hover:opacity-85"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
