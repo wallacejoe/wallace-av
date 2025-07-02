@@ -1,18 +1,20 @@
 "use client";
 import React, { useRef } from "react";
+import { packages } from "@/app/lib/placeholder-data";
+import Link from "next/link";
 
 const Carousel = () => {
   const carouselRef = useRef(null);
 
   const scrollLeft = () => {
     if (carouselRef.current) {
-      carouselRef.current.scrollBy({ left: -220, behavior: "smooth" });
+      carouselRef.current.scrollBy({ left: -359.4, behavior: "smooth" });
     }
   };
 
   const scrollRight = () => {
     if (carouselRef.current) {
-      carouselRef.current.scrollBy({ left: 220, behavior: "smooth" });
+      carouselRef.current.scrollBy({ left: 359.4, behavior: "smooth" });
     }
   };
 
@@ -21,29 +23,51 @@ const Carousel = () => {
       {/* Carousel Container */}
       <div
         ref={carouselRef}
-        className="flex space-x-4 overflow-x-scroll scroll-smooth scrollbar-hide"
+        className="flex space-x-10 snap-x px-20 overflow-x-scroll scroll-smooth scrollbar-hide before:bg-gradient-to-r before:from-gray-900 before:to-transparent after:bg-gradient-to-l after:from-gray-900 after:to-transparent"
       >
-        {Array.from({ length: 5 }).map((_, i) => (
-          <div key={i} className="min-w-[200px] bg-gray-300 p-6 rounded-md">
-            Card {i + 1}
-          </div>
+        {Array.from(packages).map((item) => (
+          <Link
+            href={`/pages/packages/${item.packageId}`}
+            key={item.packageId}
+            className="max-lg:mb-8 snap-center w-fit min-w-80 h-fit min-h-40 p-2 flex bg-neutral-500 rounded-lg box-border"
+          >
+            <div className="mx-1 w-full">
+              <h2 className="mt-3">{item.name}</h2>
+              <hr className="mt-1 w-full" />
+              <p className="mt-4 mx-3">{item.description}</p>
+            </div>
+          </Link>
         ))}
       </div>
 
       {/* Left Arrow */}
       <button
         onClick={scrollLeft}
-        className="absolute left-0 top-1/2 -translate-y-1/2 bg-black text-white p-2 rounded-md"
+        className="absolute left-2 top-1/2 -translate-y-1/2 bg-black text-white p-1 rounded-md hover:opacity-85"
       >
-        ◀
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="7 8 12 8"
+        >
+          <path d="M14 7l-5 5 5 5V7z" fill="white" />
+        </svg>
       </button>
 
       {/* Right Arrow */}
       <button
         onClick={scrollRight}
-        className="absolute right-0 top-1/2 -translate-y-1/2 bg-black text-white p-2 rounded-md"
+        className="absolute right-2 top-1/2 -translate-y-1/2 bg-black text-white p-1 rounded-md hover:opacity-85"
       >
-        ▶
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="6 8 12 8"
+        >
+          <path d="M10 17l5-5-5-5v10z" fill="white" />
+        </svg>
       </button>
     </div>
   );
