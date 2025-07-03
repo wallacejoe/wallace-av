@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { DropdownItem } from "@/app/pages/ui/Dropdown/dropdownItem";
-import { Dropdown } from "@/app/pages/ui/Dropdown/dropdown";
+import { DropdownItem } from "@/app/ui/Dropdown/dropdownItem";
+import { Dropdown } from "@/app/ui/Dropdown/dropdown";
 
 export default function DropdownMenu() {
   const [isOpen, setIsOpen] = useState(false);

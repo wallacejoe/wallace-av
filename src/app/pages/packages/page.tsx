@@ -1,4 +1,4 @@
-import PackagePage from "../ui/packagePage";
+import PackagePage from "../../ui/packagePage";
 
 export default function Page() {
   return (
