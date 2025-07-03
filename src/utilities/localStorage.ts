@@ -23,7 +23,7 @@ export const getFromStorage = () => {
 
 export const removeFromStorage = (id: string) => {
     const storage = getFromStorage();
-    const newStorage = storage.filter((item: any) => item.productId !== id);
+    const newStorage = storage.filter((item: any) => item.item.productId !== id);
 
     localStorage.setItem('cart', JSON.stringify(newStorage));
 }
