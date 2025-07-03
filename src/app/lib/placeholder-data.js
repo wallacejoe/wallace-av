@@ -1,4 +1,3 @@
-
 const products = [
     {
         productId: '0',
@@ -33,6 +32,24 @@ const products = [
     {
         productId: '5',
         name: 'placeholder 5',
+        description: 'Product description',
+        price: 10.11,
+    },
+    {
+        productId: '6',
+        name: 'placeholder 6',
+        description: 'Product description',
+        price: 10.11,
+    },
+    {
+        productId: '7',
+        name: 'placeholder 7',
+        description: 'Product description',
+        price: 10.11,
+    },
+    {
+        productId: '8',
+        name: 'placeholder 8',
         description: 'Product description',
         price: 10.11,
     },
@@ -72,6 +89,24 @@ const packages = [
     {
         packageId: '5',
         name: 'package 5',
+        description: 'Package description',
+        price: 10.11,
+    },
+    {
+        packageId: '6',
+        name: 'package 6',
+        description: 'Package description',
+        price: 10.11,
+    },
+    {
+        packageId: '7',
+        name: 'package 7',
+        description: 'Package description',
+        price: 10.11,
+    },
+    {
+        packageId: '8',
+        name: 'package 8',
         description: 'Package description',
         price: 10.11,
     },
