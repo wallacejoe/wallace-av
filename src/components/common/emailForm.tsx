@@ -1,24 +1,6 @@
 "use client";
-//import { getFromStorage } from "@/utilities/localStorage";
-//import React, { useEffect, useState } from "react";
 
 const EmailForm = ({ item }: Any) => {
-  /*const [recipient, setRecipient] = useState("");
-  const [message, setMessage] = useState("");
-
-  useEffect(() => {
-    // Populate email content from localStorage
-    // Cart feature was discarded. Saving code in case of change
-    const data = getFromStorage() || "No ordered products.";
-    const storedMessage = data
-      .map(
-        (product) => `${product.item.name}: $${product.item.price.toFixed(2)}`
-      )
-      .join("\n\n");
-    setRecipient("Sales@WallaceAV.com");
-    setMessage(storedMessage);
-  }, []);*/
-
   const handleSendEmail = () => {
     const message = `${item.name}: $${item.price}`;
     const subject = `Rental Request`;

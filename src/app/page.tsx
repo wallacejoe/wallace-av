@@ -20,13 +20,6 @@ export default function Page() {
           Serving in and around the Mesa Arizona area we can deliver, setup, and
           be onsite for technical assistance.
         </p>
-        <section className="max-lg:w-full max-lg:mt-12 max-lg:text-center">
-          <h3 className="mb-5 text-lg">Contact Us</h3>
-          <ul className="text-lg">
-            <li>Sales@WallaceAV.com</li>
-            <li>(602) 692-8470</li>
-          </ul>
-        </section>
       </div>
     </main>
   );
