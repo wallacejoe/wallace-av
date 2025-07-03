@@ -1,5 +1,5 @@
 "use client";
-import React, { useRef } from "react";
+import { useRef } from "react";
 import { packages } from "@/app/lib/placeholder-data";
 import Link from "next/link";
 
