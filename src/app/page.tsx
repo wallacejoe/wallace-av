@@ -1,4 +1,4 @@
-import Carousel from "./pages/ui/packageCarousel";
+import Carousel from "./ui/packageCarousel";
 
 export default function Page() {
   return (
