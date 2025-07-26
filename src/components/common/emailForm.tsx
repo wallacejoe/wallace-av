@@ -13,7 +13,11 @@ const EmailForm = ({ item }: Any) => {
     <div className="w-full max-w-xl m-auto p-20">
       <div className="text-center">
         <form>
-          <button type="button" onClick={handleSendEmail}>
+          <button
+            className="hover:text-accent"
+            type="button"
+            onClick={handleSendEmail}
+          >
             Order Package
           </button>
         </form>

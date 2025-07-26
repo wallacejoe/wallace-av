@@ -11,7 +11,7 @@ const Footer = () => {
   };
 
   return (
-    <div className="p-10 flex items-center justify-evenly w-full bg-green-800 text-white border-black border-t-2">
+    <div className="p-10 flex items-center justify-evenly w-full bg-primary text-white">
       <div className="text-center">
         <p>
           &copy; {getCurrentYear()}
@@ -22,7 +22,7 @@ const Footer = () => {
           <form>
             <ul className="text-lg">
               <button type="button" onClick={handleSendEmail}>
-                <li className="hover:text-purple-400">Sales@WallaceAV.com</li>
+                <li className="hover:text-accent">Sales@WallaceAV.com</li>
               </button>
               <li>(602) 692-8470</li>
             </ul>
