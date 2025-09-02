@@ -24,8 +24,8 @@ const Carousel = () => {
       <div
         ref={carouselRef}
         className="px-36 flex space-x-10 snap-x overflow-x-scroll scroll-smooth scrollbar-hide
-        before:z-10 before:absolute before:w-36 before:top-0 before:bottom-0 before:left-0 before:pointer-events-none before:bg-gradient-to-r before:from-white before:to-transparent
-        after:z-10 after:absolute after:w-36 after:top-0 after:bottom-0 after:right-0 after:pointer-events-none after:bg-gradient-to-l after:from-white after:to-transparent"
+        before:z-10 before:absolute before:w-36 before:top-0 before:bottom-0 before:left-0 before:pointer-events-none before:bg-gradient-to-r before:from-background before:to-transparent
+        after:z-10 after:absolute after:w-36 after:top-0 after:bottom-0 after:right-0 after:pointer-events-none after:bg-gradient-to-l after:from-background after:to-transparent"
       >
         {Array.from(packages).map((item) => (
           <Link
