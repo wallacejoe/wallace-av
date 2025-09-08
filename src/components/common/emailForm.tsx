@@ -1,9 +1,24 @@
 "use client";
+import { Package } from "@/utilities/types/package";
+import React from "react";
 
-const EmailForm = ({ item }: Any) => {
+type ComponentProps = {
+  item: Package;
+  subject: string;
+  message: string | null;
+  text: string;
+};
+
+const EmailForm: React.FC<ComponentProps> = ({
+  item,
+  subject,
+  message,
+  text,
+}) => {
   const handleSendEmail = () => {
-    const message = `${item.name}: $${item.price}`;
-    const subject = `Rental Request`;
+    if (message == null) {
+      message = `${item.name}: $${item.price}`;
+    }
     const body = encodeURIComponent(message);
     const mailtoLink = `mailto:${"Sales@WallaceAV"}?subject=${subject}&body=${body}`;
     window.location.href = mailtoLink;
@@ -18,7 +33,7 @@ const EmailForm = ({ item }: Any) => {
             type="button"
             onClick={handleSendEmail}
           >
-            Order Package
+            {text}
           </button>
         </form>
       </div>

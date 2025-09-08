@@ -26,7 +26,12 @@ const PackageDetails = async ({ params }: PackageDetailsProps) => {
           <h1>{item.name}</h1>
           <p>{item.description}</p>
           <p>Price: ${item.price}</p>
-          <EmailForm item={item} />
+          <EmailForm
+            item={item}
+            subject={"Rental Request"}
+            message={null}
+            text={"Order Package"}
+          />
         </div>
       </ComponentCard>
     </div>
