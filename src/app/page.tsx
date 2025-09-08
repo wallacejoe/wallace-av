@@ -17,7 +17,7 @@ export default function Page() {
         </p>
         <Link
           className="relative bg-accent2 hover:bg-accent hover:text-white max-h-fit p-2 rounded border border-black hover:border-secondary"
-          href="/"
+          href="/pages/contact"
         >
           Contact Us
         </Link>

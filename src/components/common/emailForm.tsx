@@ -3,7 +3,7 @@ import { Package } from "@/utilities/types/package";
 import React from "react";
 
 type ComponentProps = {
-  item: Package;
+  item: Package | null;
   subject: string;
   message: string | null;
   text: string;
@@ -16,8 +16,10 @@ const EmailForm: React.FC<ComponentProps> = ({
   text,
 }) => {
   const handleSendEmail = () => {
-    if (message == null) {
+    if (message == null && item != null) {
       message = `${item.name}: $${item.price}`;
+    } else if (message == null) {
+      message = "";
     }
     const body = encodeURIComponent(message);
     const mailtoLink = `mailto:${"Sales@WallaceAV"}?subject=${subject}&body=${body}`;
@@ -25,7 +27,7 @@ const EmailForm: React.FC<ComponentProps> = ({
   };
 
   return (
-    <div className="w-full max-w-xl m-auto p-20">
+    <div className="w-full max-w-xl m-auto">
       <div className="text-center">
         <form>
           <button

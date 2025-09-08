@@ -25,7 +25,7 @@ const PackageDetails = async ({ params }: PackageDetailsProps) => {
         <div className="w-full flex flex-col justify-center items-center">
           <h1>{item.name}</h1>
           <p>{item.description}</p>
-          <p>Price: ${item.price}</p>
+          <p className="mb-10">Price: ${item.price}</p>
           <EmailForm
             item={item}
             subject={"Rental Request"}

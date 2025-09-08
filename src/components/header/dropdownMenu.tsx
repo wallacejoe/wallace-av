@@ -68,16 +68,6 @@ export default function DropdownMenu() {
               Home
             </DropdownItem>
           </li>
-          {/*<li>
-            <DropdownItem
-              onItemClick={closeDropdown}
-              tag="a"
-              to="/pages/products"
-              className="flex items-center gap-3 px-3 py-2 font-medium text-gray-700 rounded-lg group text-theme-sm hover:bg-gray-100 hover:text-gray-700"
-            >
-              Products
-            </DropdownItem>
-          </li>*/}
           <li>
             <DropdownItem
               onItemClick={closeDropdown}
@@ -88,16 +78,16 @@ export default function DropdownMenu() {
               Packages
             </DropdownItem>
           </li>
-          {/*<li>
+          <li>
             <DropdownItem
               onItemClick={closeDropdown}
               tag="a"
-              to="/pages/cart"
+              to="/pages/contact"
               className="flex items-center gap-3 px-3 py-2 font-medium text-gray-700 rounded-lg group text-theme-sm hover:bg-gray-100 hover:text-gray-700"
             >
-              Cart
+              Contact Us
             </DropdownItem>
-          </li>*/}
+          </li>
         </ul>
       </Dropdown>
     </div>
