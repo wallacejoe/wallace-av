@@ -1,11 +1,38 @@
+"use client";
 import { packages } from "@/app/lib/placeholder-data";
 import Link from "next/link";
-import React from "react";
+import React, { useEffect, useState } from "react";
 
-export default async function PackagePage() {
+export default function PackagePage() {
+  const [value, setValue] = useState(packages);
+  const [filter, setFilter] = useState("");
+
+  const valueChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setFilter(event.target.value);
+  };
+
+  useEffect(() => {
+    if (filter == "") {
+      setValue(packages);
+      return;
+    }
+
+    const filtered = packages.filter((item) =>
+      item.name.toLowerCase().includes(filter.toLowerCase())
+    );
+    setValue(filtered);
+  }, [filter]);
+
   return (
     <div className="lg:w-3/4 lg:grid lg:grid-cols-3 gap-10 justify-items-center">
-      {packages.map((item) => (
+      <input
+        type="text"
+        value={filter}
+        onChange={valueChange}
+        placeholder="Search..."
+        className="col-span-3 w-full px-4 py-2 border border-black rounded-lg hover:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
+      />
+      {value.map((item) => (
         <Link
           href={`/pages/packages/${item.packageId}`}
           key={item.packageId}
