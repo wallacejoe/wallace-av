@@ -8,13 +8,13 @@ const products = [
     {
         productId: '1',
         name: 'placeholder 1',
-        description: 'Product description',
+        description: 'Different product description',
         price: 10.11,
     },
     {
         productId: '2',
         name: 'placeholder 2',
-        description: 'Product description',
+        description: 'Actually the third placeholder',
         price: 10.11,
     },
     {
@@ -26,19 +26,19 @@ const products = [
     {
         productId: '4',
         name: 'placeholder 4',
-        description: 'Product description',
+        description: 'Descriptive product',
         price: 10.11,
     },
     {
         productId: '5',
         name: 'placeholder 5',
-        description: 'Product description',
+        description: 'Product of description',
         price: 10.11,
     },
     {
         productId: '6',
         name: 'placeholder 6',
-        description: 'Product description',
+        description: 'Hello World!!!',
         price: 10.11,
     },
     {
@@ -50,7 +50,7 @@ const products = [
     {
         productId: '8',
         name: 'placeholder 8',
-        description: 'Product description',
+        description: 'Da heck am I doing???',
         price: 10.11,
     },
 ];
@@ -65,13 +65,13 @@ const packages = [
     {
         packageId: '1',
         name: 'package 1',
-        description: 'Package description',
+        description: 'Different package description',
         price: 10.11,
     },
     {
         packageId: '2',
         name: 'package 2',
-        description: 'Package description',
+        description: 'Actually the third placeholder',
         price: 10.11,
     },
     {
@@ -83,19 +83,19 @@ const packages = [
     {
         packageId: '4',
         name: 'package 4',
-        description: 'Package description',
+        description: 'Descriptive package',
         price: 10.11,
     },
     {
         packageId: '5',
         name: 'package 5',
-        description: 'Package description',
+        description: 'Package of description',
         price: 10.11,
     },
     {
         packageId: '6',
         name: 'package 6',
-        description: 'Package description',
+        description: 'Hello World!!!',
         price: 10.11,
     },
     {
@@ -106,8 +106,8 @@ const packages = [
     },
     {
         packageId: '8',
-        name: 'package 8',
-        description: 'Package description',
+        name: 'Hello 8',
+        description: 'Da heck am I doing???',
         price: 10.11,
     },
 ];
