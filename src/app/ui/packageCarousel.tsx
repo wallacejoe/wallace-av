@@ -4,18 +4,14 @@ import { packages } from "@/app/lib/placeholder-data";
 import Link from "next/link";
 
 const Carousel = () => {
-  const carouselRef = useRef(null);
+  const carouselRef = useRef<HTMLDivElement>(null);
 
   const scrollLeft = () => {
-    if (carouselRef.current) {
-      carouselRef.current.scrollBy({ left: -359.4, behavior: "smooth" });
-    }
+    carouselRef.current?.scrollBy({ left: -359.4, behavior: "smooth" });
   };
 
   const scrollRight = () => {
-    if (carouselRef.current) {
-      carouselRef.current.scrollBy({ left: 359.4, behavior: "smooth" });
-    }
+    carouselRef.current?.scrollBy({ left: 359.4, behavior: "smooth" });
   };
 
   return (
